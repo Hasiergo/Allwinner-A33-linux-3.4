@@ -4213,7 +4213,10 @@ int xhci_gen_setup(struct usb_hcd *hcd, xhci_get_quirks_t get_quirks)
 	 * success event after a short transfer. This quirk will ignore such
 	 * spurious event.
 	 */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2d75d5d8384d... usb: host: xhci: Enable XHCI_SPURIOUS_SUCCESS for all controllers with xhci 1.0
 	if (xhci->hci_version > 0x96)
 		xhci->quirks |= XHCI_SPURIOUS_SUCCESS;
 

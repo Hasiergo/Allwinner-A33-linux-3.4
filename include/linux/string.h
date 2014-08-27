@@ -133,7 +133,7 @@ int bprintf(u32 *bin_buf, size_t size, const char *fmt, ...) __printf(3, 4);
 #endif
 
 extern ssize_t memory_read_from_buffer(void *to, size_t count, loff_t *ppos,
-			const void *from, size_t available);
+				       const void *from, size_t available);
 
 /**
  * strstarts - does @str start with @prefix?
@@ -145,15 +145,6 @@ static inline bool strstarts(const char *str, const char *prefix)
 	return strncmp(str, prefix, strlen(prefix)) == 0;
 }
 
-/**
- * kbasename - return the last part of a pathname.
- *
- * @path: path to extract the filename from.
- */
-static inline const char *kbasename(const char *path)
-{
-	const char *tail = strrchr(path, '/');
-	return tail ? tail + 1 : path;
-}
+void memzero_explicit(void *s, size_t count);
 #endif
 #endif /* _LINUX_STRING_H_ */

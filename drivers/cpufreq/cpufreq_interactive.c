@@ -67,7 +67,7 @@ static spinlock_t speedchange_cpumask_lock;
 static struct mutex gov_lock;
 
 /* Target load.  Lower values result in higher CPU speeds. */
-#define DEFAULT_TARGET_LOAD 90
+#define DEFAULT_TARGET_LOAD 80
 static unsigned int default_target_loads[] = {DEFAULT_TARGET_LOAD};
 
 #define DEFAULT_TIMER_RATE (50 * USEC_PER_MSEC)
@@ -85,7 +85,7 @@ struct cpufreq_interactive_tunables {
 #elif defined(CONFIG_ARCH_SUN8IW6P1)
 	#define DEFAULT_HISPEED_FREQ_LITTLE      (864000)
 #elif defined(CONFIG_ARCH_SUN8IW5P1) || defined(CONFIG_ARCH_SUN8IW8P1)
-	#define DEFAULT_HISPEED_FREQ_LITTLE     (1200000)
+	#define DEFAULT_HISPEED_FREQ_LITTLE     (1340000)
 #elif defined(CONFIG_ARCH_SUN8IW7P1)
 	#define DEFAULT_HISPEED_FREQ_LITTLE     (1008000)
 #endif
@@ -93,7 +93,7 @@ struct cpufreq_interactive_tunables {
 	/* Hi speed to bump to from lo speed when load burst (default max) */
 	unsigned int hispeed_freq;
 	/* Go to hi speed when CPU load at or above this value. */
-#define DEFAULT_GO_HISPEED_LOAD 70
+#define DEFAULT_GO_HISPEED_LOAD 90
 	unsigned long go_hispeed_load;
 
 	spinlock_t target_loads_lock;
@@ -139,7 +139,7 @@ struct cpufreq_interactive_tunables {
 #elif defined(CONFIG_ARCH_SUN8IW6P1)
 	#define DEFAULT_INPUT_EVENT_FRFQ_LITTLE    (1008000)
 #elif defined(CONFIG_ARCH_SUN8IW5P1) || defined(CONFIG_ARCH_SUN8IW7P1) || defined(CONFIG_ARCH_SUN8IW8P1)
-	#define DEFAULT_INPUT_EVENT_FRFQ_LITTLE    (1008000)
+	#define DEFAULT_INPUT_EVENT_FRFQ_LITTLE    (1200000)
 #endif
 
 	int input_dev_monitor;

@@ -223,19 +223,7 @@ endif
 #
 # Select the chip with wafer sun8iw5
 #
-if ARCH_SUN8IW5
-choice
-	prompt "Select the chip with wafer sun8iw5"
-	default ARCH_SUN8IW5P1
-	help
-	 Select the chip with wafer sun8iw5
 
-config ARCH_SUN8IW5P1
-	bool "Allwinner A33 chip(sun8iw5p1)"
-	help
-	  Allwinner Axx chip
-endchoice
-endif
 
 config SW_POWERNOW
     bool "Enable sw_powernow feature"

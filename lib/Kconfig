@@ -171,6 +171,12 @@ config ZLIB_INFLATE
 config ZLIB_DEFLATE
 	tristate
 
+config LZ4_COMPRESS
+	tristate
+
+config LZ4_DECOMPRESS
+	tristate
+
 config LZO_COMPRESS
 	tristate
 
@@ -197,7 +203,11 @@ config DECOMPRESS_XZ
 	select XZ_DEC
 	tristate
 
-config DECOMPRESS_LZO
+config DECOMPRESS_LZ4
+	select LZ4_DECOMPRESS
+	tristate
+	
+config DECOMPRESS_LZ
 	select LZO_DECOMPRESS
 	tristate
 

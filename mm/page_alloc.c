@@ -1575,6 +1575,10 @@ failed:
 	return NULL;
 }
 
+#define ALLOC_HARDER		0x10 /* try to alloc harder */
+#define ALLOC_HIGH		0x20 /* __GFP_HIGH set */
+#define ALLOC_CPUSET		0x40 /* check for correct cpuset */
+
 #ifdef CONFIG_FAIL_PAGE_ALLOC
 
 static struct {

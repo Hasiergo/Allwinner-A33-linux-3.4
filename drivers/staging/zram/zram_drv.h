@@ -84,6 +84,7 @@ struct zram_stats {
 	u32 pages_stored;	/* no. of pages currently stored */
 	u32 good_compress;	/* % of pages with compression ratio<=50% */
 	u32 bad_compress;	/* % of pages with compression ratio>=75% */
+	u32 pages_expand;	/* % of incompressible pages */
 };
 
 struct zram {

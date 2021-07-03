@@ -632,6 +632,10 @@ static void option_instat_callback(struct urb *urb);
 #define RATE_VENDOR_ID   0x20a6
 #define RATE_PRODUCT_ID  0x1105
 
+/* Inovia */
+#define INOVIA_VENDOR_ID			0x20a6
+#define INOVIA_SEW858				0x1105
+
 /* VIA Telecom */
 #define VIATELECOM_VENDOR_ID			0x15eb
 #define VIATELECOM_PRODUCT_CDS7			0x0001
